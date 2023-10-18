@@ -1,11 +1,10 @@
 {
     "fskey": "WebPublishModule",
-    "type": 1,
     "name": "Web Publish Module",
     "description": "Collector-specific Web Publishing Module.",
     "author": "Tracy",
     "authorLink": "https://marketplace.fresns.com/developer/tracy",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "scene": [
         "extendUser"
     ],
