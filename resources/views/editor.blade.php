@@ -13,17 +13,22 @@
 
             <div class="input-group mb-3">
                 <span class="input-group-text">Group</span>
-                <input type="text" class="form-control" name="postGid" placeholder="postGid">
+                <input type="text" class="form-control" name="gid" placeholder="gid">
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">Geotag</span>
+                <input type="text" class="form-control" name="gtid" placeholder="gtid">
             </div>
 
             <div class="input-group mb-3">
                 <span class="input-group-text">Title</span>
-                <input type="text" class="form-control" name="postTitle" placeholder="postTitle">
+                <input type="text" class="form-control" name="title" placeholder="title">
             </div>
 
             <div class="input-group mb-3">
                 <span class="input-group-text">Content</span>
-                <textarea class="form-control" name="content"></textarea>
+                <textarea class="form-control" name="content" rows="5"></textarea>
             </div>
 
             <div class="input-group mb-3">
@@ -32,6 +37,27 @@
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" name="isMarkdown" value="1" id="isMarkdown">
                         <label class="form-check-label" for="isMarkdown">Content Markdown</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">Comment Policy</span>
+                <select class="form-select" name="commentPolicy">
+                    <option value="1" selected>Everyone</option>
+                    <option value="2">People you follow</option>
+                    <option value="3">People you follow or verified</option>
+                    <option value="4">No one is allowed</option>
+                    <option value="5">Only users you mention</option>
+                </select>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">Comment Private</span>
+                <div class="form-control">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="commentPrivate" value="1" id="commentPrivate">
+                        <label class="form-check-label" for="commentPrivate">Private</label>
                     </div>
                 </div>
             </div>
@@ -57,10 +83,8 @@
             $(document).on('submit', 'form', function () {
                 var btn = $(this).find('button[type="submit"]');
                 btn.prop('disabled', true);
-                if (0 === btn.children('.spinner-border').length) {
-                    btn.prepend(
-                        '<span class="spinner-border spinner-border-sm mg-r-5 d-none" role="status" aria-hidden="true"></span> '
-                    );
+                if (btn.children('.spinner-border').length == 0) {
+                    btn.prepend('<span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span> ');
                 }
                 btn.children('.spinner-border').removeClass('d-none');
             });
