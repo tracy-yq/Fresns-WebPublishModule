@@ -198,8 +198,9 @@ class WebController extends Controller
                 'aid' => null,
                 'uid' => $uid,
                 'type' => File::TYPE_IMAGE,
-                'moreJson' => null,
                 'file' => $request->image,
+                'warningType' => null,
+                'moreInfo' => null,
             ];
 
             \FresnsCmdWord::plugin('Fresns')->uploadFile($fileWordBody);
