@@ -3,16 +3,16 @@
     "name": "Web Publish Module",
     "description": "Collector-specific Web Publishing Module.",
     "author": "Tracy",
-    "authorLink": "https://marketplace.fresns.com/developer/tracy",
+    "website": "https://marketplace.fresns.com/developer/tracy",
     "version": "1.1.0",
-    "panelUsages": [
-        "extendUser"
-    ],
-    "accessPath": null,
-    "settingsPath": "/web-publish-module/admin",
     "providers": [
         "Plugins\\WebPublishModule\\Providers\\WebPublishModuleServiceProvider"
     ],
     "autoloadFiles": [],
-    "aliases": {}
+    "aliases": {},
+    "panelUsages": [
+        "extendUser"
+    ],
+    "accessPath": null,
+    "settingsPath": "/web-publish-module/admin"
 }
